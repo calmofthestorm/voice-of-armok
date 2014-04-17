@@ -36,7 +36,7 @@ The purpose of this project is threefold:
 
 * Provide a simple and intuitive (assuming you are somewhat familiar with DF's interface) control channel to complement the keyboard for tasks which are tedious on it, while staying out of the way when the keyboard makes sense.
 * Provide a lightweight and powerful macro system, inspired by the lightweight macros in VIM.
-* Allows the God of Blood to speak, and let their voice wield doom! Now cursing at your dwarves will actually do something!
+* Allows the God of Blood to speak, and let their voice wield doom! Now cursing at your dwarves will actually do something (probably something Fun)!
 
 The nice thing about voice is that while latency is high compared to keyboard,
 information content is also high. For example, consider the phrase "select up 4
@@ -83,7 +83,7 @@ Dragonfly over Dragon's built-in systems.
 
 Most commands where it makes sense can take a number (up 5, delve 25, etc).
 
-Additionally, after speaking a sequence of commands you may and the sequence
+Additionally, after speaking a sequence of commands you may end the sequence
 with "repeat that <n> times" to repeat the entire sequence N times (N may be
 1-100).
 
@@ -94,13 +94,13 @@ Macros work as follows:
 * Say "begin macro <m>" to record macro m, replacing any previous contents.
 * Say "end macro" to stop recording a macro.
 * Say "play macro <m>" To play macro n once.
-* Say "play macro <m>" To play macro m n times. n may be 1-100.
+* Say "play macro <m> <n> times" To play macro m n times. n may be 1-100.
 * Currently, macros are not saved between reloads of the module (turning off the mic). The macro system in this module is intended to be a quick and lightweight way to accomplish tasks that are repetitive, and so I do not foresee this being a major issue. For more elaborate/persistent macros, look at Autohotkey or DF's own macro system (or see the page on the DF wiki for other options).
 
 FAQ
 ===
 
-Q: OH GOD WHY????
+Q: OH ARMOK'S SWEET ADAMANTINE BEARD WHY????
 
 A: I've already written a number_ of grammars for Dragonfly, some quite complex (VIM), so it was a fairly quick process to crank out a grammar for DF. And I wanted to show Skyrim fans that they're not the only ones who can get mods for voice control!
 
