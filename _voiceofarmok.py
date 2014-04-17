@@ -230,6 +230,74 @@ building_menu_table = {
   "hive":                   Key("a-h"),
 }
 
+designation_table = {
+  "mine":                   Key("d"),
+
+  "channel":                Key("h"),
+
+  "remove [up] ramp [up]":  Key("z"),
+  "remove [up] stair [up]": Key("z"),
+
+  "upward stairway":        Key("u"),
+  "downward stairway":      Key("j"),
+  "stairway":               Key("i"),
+
+  "upward ramp":            Key("r"),
+  "ramp up":                Key("r"),
+
+  "chop [[down] trees]":    Key("t"),
+
+  "gather [plants]":        Key("p"),
+
+  "smooth [stone]":         Key("s"),
+
+  "engrave [stone]":        Key("e"),
+
+  "carve fortifications":   Key("a"),
+  "carve fort":             Key("a"),
+  "fortification":          Key("a"),
+  "fortify":                Key("a"),
+
+  "carve track":            Text("T"),
+  "track":                  Text("T"),
+
+  "toggle engravings":      Key("v"),
+
+  "remove designation":     Key("x"),
+  "remove construction":    Key("n"),
+
+  "set [building] [item] properties":Key("b"),
+  "properties":Key("b"),
+
+  "[set] traffic [areas]":Key("o"),
+}
+
+building_item_properties_table = {
+  "reclaim [items] [buildings]":Key("c"),
+
+  "forbid [items] [buildings]":Key("f"),
+
+  "melt [items]":           Key("m"),
+
+  "unmelt [items]":         Text("M"),
+  "remove melt":            Text("M"),
+
+  "dump [items]":           Key("d"),
+
+  "undump [items]":         Text("D"),
+  "remove dump":            Text("D"),
+
+  "hide [items] [buildings]":Key("h"),
+  "unhide [items] [buildings]":Key("H"),
+}
+
+traffic_table = {
+  "high traffic":           Key("h"),
+  "normal traffic":         Key("n"),
+  "low traffic":            Key("l"),
+  "restricted traffic":     Key("r"),
+}
+
 general_table = {
   "delve up [<n>]":         Key("langle/0.10:%(n)d"),
   "delve [down] [<n>]":     Key("rangle/0.10:%(n)d"),
@@ -263,6 +331,8 @@ general_table = {
   "yes [<n>]":        Key("enter:%(n)d"),
 
   "tab [<n>]":        Key("tab:%(n)d"),
+
+  "undesignate":      Text("dx"),
 }
 
 class CommandChainRule(MappingRule):
@@ -280,6 +350,9 @@ command_table = {}
 command_table.update(main_menu_table)
 command_table.update(building_menu_table)
 command_table.update(general_table)
+command_table.update(designation_table)
+command_table.update(traffic_table)
+command_table.update(building_item_properties_table)
 
 mapping = dict((key, value) for (key, value) in command_table.iteritems())
 single_action = RuleRef(rule=CommandChainRule(mapping=mapping, name="c"))
