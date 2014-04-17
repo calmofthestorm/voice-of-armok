@@ -231,16 +231,22 @@ building_menu_table = {
 }
 
 general_table = {
+  "delve up [<n>]":         Key("langle/0.10:%(n)d"),
+  "delve [down] [<n>]":     Key("rangle/0.10:%(n)d"),
+  "surf [up] [<n>]":        Key("langle/0.10:%(n)d"),
+  "surf down [<n>]":        Key("rangle/0.10:%(n)d"),
+  "up [<n>] z level":       Key("langle/0.10:%(n)d"),
+  "down [<n>] z level":     Key("rangle/0.10:%(n)d"),
+
   "up [<n>]":         Key("up:%(n)d"),
   "down [<n>]":       Key("down:%(n)d"),
   "left [<n>]":       Key("left:%(n)d"),
   "right [<n>]":      Key("right:%(n)d"),
 
-  "gope [<n>]":       Key("pgup:%(n)d"),
-  "drop [<n>]":       Key("pgdown:%(n)d"),
-
-  "lope [<n>]":       Key("c-left:%(n)d"),
-  "yope [<n>]":       Key("c-right:%(n)d"),
+  "gope [<n>]":       Key("s-up:%(n)d"),
+  "drop [<n>]":       Key("s-down:%(n)d"),
+  "lope [<n>]":       Key("s-left:%(n)d"),
+  "yope [<n>]":       Key("s-right:%(n)d"),
 
   "ace [<n>]":        Key("space:%(n)d"),
   "spacebar [<n>]":   Key("space:%(n)d"),
