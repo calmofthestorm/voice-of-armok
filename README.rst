@@ -14,6 +14,64 @@ Status
 
 Already quite useful. In active development as of April 2014.
 
+Examples
+========
+
+I made these rooms entirely by voice. When actually playing, I'd realistically
+use voice for the rooms and their doorways and probably do the rest (hallways,
+cursor positioning) by hand. Voice is good for repetitive actions; keyboard
+for movement when you don't know the precise count.
+
+Not all frames are shown.
+
+Bedrooms
+--------
+(yes I know my layout is really inefficient. I play games the way I want to:P)
+
+.. image:: doc/bed.gif
+
+::
+
+  (begin macro 1)
+  slap up 2 left 2 slap down 2 left 2 repeat 5 times
+  (right 20 up 6)
+  slap up 2 left 2 slap down 2 left 2 repeat 5 times
+  (down right 3)
+  slap 2 down 2 slap 2 up 2 right 4 repeat 5 times
+  (left 4 down)
+  slap left 16 slap
+  (end macro 1)
+
+  (up 6 right 17)
+  play macro 1
+  (up 6 right 17)
+  play macro 1
+
+  (slap left 3 slap)
+  (slap down 20 slap)
+  (slap right 22 slap)
+  (slap up 20 slap 2 right 3 slapa)
+  (down 10 slap right 3 slap)
+  (left 10 slap right 3 slap)
+
+Workshops
+---------
+(yes I know my layout is really inefficient. I play games the way I want to:P)
+
+.. image:: doc/workshop.gif
+
+::
+
+  slap up 4 left 4 slap down 4 left 2 repeat 5 times
+  (right 4 down)
+  slap 2 right 6 repeat 5 times
+  (down left 6)
+  slap left 24 slap
+  (down)
+  slap 2 right 6 repeat 5 times
+  (left 4 down)
+  slap down 4 left 4 slap left 2 up 4 repeat 5 times
+
 Introduction
 ============
 
@@ -96,64 +154,6 @@ Macros work as follows:
 * Say "play macro <m>" To play macro n once.
 * Say "play macro <m> <n> times" To play macro m n times. n may be 1-100.
 * Currently, macros are not saved between reloads of the module (turning off the mic). The macro system in this module is intended to be a quick and lightweight way to accomplish tasks that are repetitive, and so I do not foresee this being a major issue. For more elaborate/persistent macros, look at Autohotkey or DF's own macro system (or see the page on the DF wiki for other options).
-
-Examples
-========
-
-I made these rooms entirely by voice. When actually playing, I'd realistically
-use voice for the rooms and their doorways and probably do the rest (hallways,
-cursor positioning) by hand. Voice is good for repetitive actions; keyboard
-for movement when you don't know the precise count.
-
-Not all frames are shown.
-
-Bedrooms
---------
-(yes I know my layout is really inefficient. I play games the way I want to:P)
-
-.. image:: doc/bed.gif
-
-::
-
-  (begin macro 1)
-  slap up 2 left 2 slap down 2 left 2 repeat 5 times
-  (right 20 up 6)
-  slap up 2 left 2 slap down 2 left 2 repeat 5 times
-  (down right 3)
-  slap 2 down 2 slap 2 up 2 right 4 repeat 5 times
-  (left 4 down)
-  slap left 16 slap
-  (end macro 1)
-
-  (up 6 right 17)
-  play macro 1
-  (up 6 right 17)
-  play macro 1
-
-  (slap left 3 slap)
-  (slap down 20 slap)
-  (slap right 22 slap)
-  (slap up 20 slap 2 right 3 slapa)
-  (down 10 slap right 3 slap)
-  (left 10 slap right 3 slap)
-
-Workshops
----------
-(yes I know my layout is really inefficient. I play games the way I want to:P)
-
-.. image:: doc/workshop.gif
-
-::
-
-  slap up 4 left 4 slap down 4 left 2 repeat 5 times
-  (right 4 down)
-  slap 2 right 6 repeat 5 times
-  (down left 6)
-  slap left 24 slap
-  (down)
-  slap 2 right 6 repeat 5 times
-  (left 4 down)
-  slap down 4 left 4 slap left 2 up 4 repeat 5 times
 
 FAQ
 ===
