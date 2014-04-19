@@ -1,0 +1,21 @@
+(begin macro 1)
+slap up 2 left 2 slap down 2 left 2 repeat 5 times
+(right 20 up 6)
+slap up 2 left 2 slap down 2 left 2 repeat 5 times
+(down right 3)
+slap 2 down 2 slap 2 up 2 right 4 repeat 5 times
+(left 4 down)
+slap left 16 slap
+(end macro 1)
+
+(up 6 right 17)
+play macro 1
+(up 6 right 17)
+play macro 1
+
+(slap left 3 slap)
+(slap down 20 slap)
+(slap right 22 slap)
+(slap up 20 slap 2 right 3 slapa)
+(down 10 slap right 3 slap)
+(left 10 slap right 3 slap)

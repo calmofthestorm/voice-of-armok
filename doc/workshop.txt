@@ -1,0 +1,9 @@
+slap up 4 left 4 slap down 4 left 2 repeat 5 times
+(right 4 down)
+slap 2 right 6 repeat 5 times
+(down left 6)
+slap left 24 slap
+(down)
+slap 2 right 6 repeat 5 times
+(left 4 down)
+slap down 4 left 4 slap left 2 up 4 repeat 5 times
