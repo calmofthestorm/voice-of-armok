@@ -12,7 +12,13 @@ alex@aroper.net
 Status
 ======
 
-Already quite useful. In active development as of April 2014.
+Essentially complete. Most of the frequently traversed menus are available
+via voice. Until/unless context information becomes available, further voice
+shortcuts for less commonly-used functionality would reduce speed and accuracy
+due to Dragon not knowing the underlying DF grammar.
+
+I'll revisit this when/if DFHack makes it easy to access UI state information
+out of context.
 
 Examples
 ========

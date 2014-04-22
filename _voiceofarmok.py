@@ -34,9 +34,6 @@ disable_context = ~df_context
 active_macro = None
 macros = {}
 
-def Nested(command):
-  return Text(command) + Key("left:%i" % (len(command) / 2))
-
 main_menu_table = {
   # Spoken-form           command
 
@@ -298,6 +295,36 @@ traffic_table = {
   "restricted traffic":     Key("r"),
 }
 
+stockpile_table = {
+  "stock animal":           Key("a"),
+  "stock furniture [storage]": Key("u"),
+  "stock corpses":          Key("y"),
+  "stock stone":            Key("s"),
+  "stock gem":              Key("e"),
+  "stock cloth":            Key("h"),
+  "stock ammo":             Key("z"),
+  "stock finished goods":   Key("g"),
+  "stock weapons":          Key("p"),
+  "stock food":             Key("f"),
+  "stock refuse":           Key("r"),
+  "stock wood":             Key("w"),
+  "stock [bar] block":      Key("b"),
+  "stock bar":              Key("b"),
+  "stock leather":          Key("l"),
+  "stock coins":            Key("n"),
+  "stock armor":            Key("d"),
+  "stock custom":           Key("c"),
+  "custom stockpile":       Key("c"),
+  "custom settings":        Key("t"),
+
+  "enable":                 Key("e"),
+  "disable":                Key("d"),
+  "allow [all]":            Key("a"),
+  "block [all]":            Key("b"),
+  "permit":                 Key("p"),
+  "forbid":                 Key("f"),
+}
+
 general_table = {
   "delve up [<n>]":         Key("langle/0.10:%(n)d"),
   "delve [down] [<n>]":     Key("rangle/0.10:%(n)d"),
@@ -315,6 +342,15 @@ general_table = {
   "drop [<n>]":       Key("s-down:%(n)d"),
   "lope [<n>]":       Key("s-left:%(n)d"),
   "yope [<n>]":       Key("s-right:%(n)d"),
+
+  "next [<n>]":       Key("plus:%(n)d"),
+  "prior [<n>]":      Key("minus:%(n)d"),
+  "previous [<n>]":   Key("minus:%(n)d"),
+
+  "wider [<n>]":      Key("k:%(n)d"),
+  "taller [<n>]":     Key("u:%(n)d"),
+  "narrower [<n>]":   Key("h:%(n)d"),
+  "shorter [<n>]":    Key("m:%(n)d"),
 
   "ace [<n>]":        Key("space:%(n)d"),
   "spacebar [<n>]":   Key("space:%(n)d"),
@@ -353,6 +389,7 @@ command_table.update(general_table)
 command_table.update(designation_table)
 command_table.update(traffic_table)
 command_table.update(building_item_properties_table)
+command_table.update(stockpile_table)
 
 mapping = dict((key, value) for (key, value) in command_table.iteritems())
 single_action = RuleRef(rule=CommandChainRule(mapping=mapping, name="c"))
